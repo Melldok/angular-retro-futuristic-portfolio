@@ -1,0 +1,23 @@
+
+  <!-- Gradient Border -->
+  <div class="gradient-border">
+      <!-- Main Image -->
+  <!-- <img [src]="src" alt="Image" class="card-image" /> -->
+
+  <!-- Content Overlay -->
+  <div class="content-overlay">
+    <h3 class="title">{{ title }}</h3>
+    <p class="description">
+      {{ description }}
+    </p>
+    <div class="bottom-info">
+      <span class="online-users">{{ randomOnlineUsers }} Online</span>
+      <button class="see-more-btn" (click)="toggleExpand()">
+        {{ isExpanded ? 'Close' : 'See More' }}
+      </button>
+    </div>
+  </div>
+  </div>
+
+
+

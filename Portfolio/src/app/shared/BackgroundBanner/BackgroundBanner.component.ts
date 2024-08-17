@@ -1,18 +1,25 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-background-banner',
+  selector: 'background-banner',
   standalone: true,
   imports: [
     CommonModule,
   ],
   templateUrl: './BackgroundBanner.component.html',
-  styles: `
-    :host {
-      display: block;
-    }
-  `,
+  styleUrls: ['./BackgroundBanner.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BackgroundBannerComponent { }
+export class BackgroundBannerComponent {
+
+  @Input({ required: true }) title : string = '';
+  @Input({ required: true }) src : string ='';
+
+  public randomOnlineUsers = Math.floor(Math.random() * 10000) + 1000;
+
+  handleClick(): void {
+
+  }
+
+ }

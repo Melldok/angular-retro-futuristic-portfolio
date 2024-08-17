@@ -1,0 +1,26 @@
+<div class="flex flex-col items-center w-full">
+  <!-- Dropdown Header -->
+  <div class="relative">
+    <button class="bg-transparent text-white font-bold py-2 px-4 rounded inline-flex items-center">
+      <span class="mr-1">{{ currentRoute() | titlecase }}</span>
+      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path d="M5.5 7l4.5 4.5L14.5 7h-9z" />
+      </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <ul class="dropdown-content absolute hidden text-gray-700 pt-1 w-48 bg-white rounded-md shadow-lg">
+      @for (item of menuItems; track item.path) {
+      <li class="">
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="active-route"
+          class="block px-4 py-2 text-lg text-black hover:bg-gray-300 hover:text-black"
+        >
+          {{ item.path ! | titlecase | translate }}
+        </a>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

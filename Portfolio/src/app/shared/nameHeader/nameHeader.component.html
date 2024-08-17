@@ -1,1 +1,11 @@
-<p>nameHeader works!</p>,
+<div class="name-banner-container">
+  <button class="lang-button" (click)="switchLanguage()">
+    {{ currentLanguage === 'en' ? 'Español' : 'English' }}
+  </button>
+
+  <h2 class="name-title">David Dokic</h2>
+
+  <button class="resume-button" (click)="resumeDownload()">
+    Resume
+  </button>
+</div>

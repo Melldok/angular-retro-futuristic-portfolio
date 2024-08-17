@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+
+
+## Configuration for i18n 
+
+This project is configured to support multiple languages. The default language is English. The supported languages are English and Spanish. The configuration is in the `angular.json` file. The configuration is as follows:
+
+This project uses angular 18.1
+The configuration can be found on the `angular.json` and the `httpLoaderFactory.ts file` found on app/config This project uses SSR so   .

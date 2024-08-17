@@ -1,1 +1,52 @@
-<p>HomeRender works!</p>,
+<background-banner
+  [title]="'Your Custom Title'"
+  [src]="'/assets/images/home.webp'"
+></background-banner>
+
+<h3>Featured Content</h3>
+
+<div class="flex gap-2 h-11rem">
+  <div class="flex flex-grow-1 bg-blue-200">
+    <expandable-featured-card
+      [title]="'Your Custom Title'"
+      [description]="'Your Custom Description'"
+      [src]="'/assets/images/home.webp'"
+    />
+  </div>
+    <expandable-featured-card
+      [title]="'Your Custom Title'"
+      [description]="'Your Custom Description'"
+      [src]="'/assets/images/home.webp'"
+    />
+</div>
+
+<hr />
+
+<div class="featuredContainer">
+  <expandable-featured-card
+    [title]="'Your Custom Title'"
+    [description]="'Your Custom Description'"
+    [src]="'/assets/images/home.webp'"
+  />
+    <expandable-featured-card
+    [title]="'Your Custom Title'"
+    [description]="'Your Custom Description'"
+    [src]="'/assets/images/home.webp'"
+  />
+</div>
+
+<div class="flex gap-2 h-11rem">
+  <div class="flex flex-grow-1 bg-blue-200">
+  </div>
+  <div class="flex flex-grow-1 bg-blue-200">
+  </div>
+  <div class="flex flex-grow-1 bg-blue-200">
+  </div>
+</div>
+
+<div class="flex gap-2 h-11rem">
+  <decorative-drawer></decorative-drawer>
+  <decorative-drawer></decorative-drawer>
+  <decorative-drawer></decorative-drawer>
+</div>
+

@@ -1,14 +1,34 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { LanguageSwitchService } from '../../services/LanguageSwitch.service';
 
 @Component({
-  selector: 'app-name-header',
+  selector: 'name-header',
   standalone: true,
-  imports: [
-    CommonModule,
-  ],
+  imports: [CommonModule],
   templateUrl: './nameHeader.component.html',
-  styleUrl: './nameHeader.component.css',
+  styleUrls: ['./nameHeader.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NameHeaderComponent { }
+export class NameHeaderComponent {
+  private languageSwitchService = inject(LanguageSwitchService);
+
+  constructor() {}
+
+  get currentLanguage(): string {
+    return this.languageSwitchService.getCurrentLanguage();
+  }
+
+  switchLanguage(): void {
+    const newLanguage = this.currentLanguage === 'en' ? 'es' : 'en';
+    this.languageSwitchService.setLanguage(newLanguage);
+  }
+
+  resumeDownload(): void {
+    const downloadUrl =
+      this.currentLanguage === 'en'
+        ? 'https://drive.google.com/file/d/1g1YHQRnOCVkbUzNlrXO7Nx7hhZFr6Nqu/view?usp=drive_link'
+        : 'https://drive.google.com/file/d/1Hfa1soOALheHAqys4gOd0x6zyJM7PRsj/view?usp=drive_link';
+    window.open(downloadUrl, '_blank');
+  }
+}

@@ -1,0 +1,30 @@
+a{
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  margin: 0.2rem 0;
+  border-radius: 0.5rem;
+  box-sizing : border-box;
+  text-align: center;
+  font-family : 'IBM Plex mono', monospace;
+}
+
+h2{
+  font-family : 'IBM Plex mono', monospace;
+}
+
+a:hover{
+  background-color: #242643;
+  box-shadow: inset 0 0 0 1px #00DAEA;
+  transition : 0.5s;
+}
+
+.active-route{
+  background-color: #1C1D2D;
+  font-weight: bold;
+}
+
+hr{
+  border: 0.2px solid #3E3F54;
+  margin: 1rem 0;
+}

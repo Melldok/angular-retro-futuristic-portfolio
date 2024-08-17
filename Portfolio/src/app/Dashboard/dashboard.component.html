@@ -1,17 +1,50 @@
-<div class="grid">
-  <div class="col">
-    <div class="flex flex-direction-row"></div>
-    <decorative-drawer></decorative-drawer>
-    <left-section></left-section>
+<div *ngIf="!(isHandset$ | async); else mobileLayout">
+  <!-- Desktop Layout -->
+  <div class="grid w-full h-full p-0 m-0">
+    <!-- Left Sidebar (Decorative Drawer) -->
+    <div class="col-1 h-screen">
+      <decorative-drawer></decorative-drawer>
+    </div>
 
+    <!-- Left Main Content Section -->
+    <div class="col-2 h-screen p-3 navigationSection">
+      <app-navigation></app-navigation>
+    </div>
+
+    <!-- Main Center Content Section -->
+    <div class="col h-screen py-4 px-0">
+      <div class="h-full w-full">
+        <name-header></name-header>
+        <div class="h-full center-holder p-5 my-4">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar (Profile Section) -->
+    <div class="col-2 h-screen p-3 profileSection">
+      <div class="h-full w-full">
+        <profile-render-section></profile-render-section>
+      </div>
+    </div>
   </div>
-
-  <div class="col-4">
-    <router-outlet></router-outlet>
-  </div>
-
-  <div class="col">
-    <profile-render-section></profile-render-section>
-  </div>
-
 </div>
+
+
+<!-- Mobile Layout -->
+<ng-template #mobileLayout>
+  <div class="flex flex-col w-full h-full">
+    <!-- Mobile Navigation -->
+    <app-navigation-mobile></app-navigation-mobile>
+
+    <!-- Main Content Section -->
+    <div class="flex-1 h-full p-3">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- Mobile Profile Section -->
+    <div class="h-auto p-3">
+      <profile-render-section></profile-render-section>
+    </div>
+  </div>
+</ng-template>

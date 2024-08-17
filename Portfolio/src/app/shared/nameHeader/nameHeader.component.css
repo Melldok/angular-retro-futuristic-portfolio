@@ -1,3 +1,38 @@
-:host {
-  display: block;
+.name-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 40px;
+  border-radius: 4.725px;
+  border: 1.181px solid rgba(255, 255, 255, 0.20);
+  background: linear-gradient(180deg, rgba(46, 51, 90, 0.30) 0%, rgba(28, 27, 51, 0.30) 100%);
+  margin: auto;
 }
+
+.lang-button, .resume-button {
+  border-radius: 3px;
+  border: 1px solid #305C8C;
+  background: #383C5C;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  height: 100%;
+  padding: 0 2rem;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.lang-button:hover, .resume-button:hover {
+  background-color: #305C8C; /* Optional hover effect */
+}
+
+.name-title {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.2rem;
+  font-family: 'Lato', sans-serif;
+}
+

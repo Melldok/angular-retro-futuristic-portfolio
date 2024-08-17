@@ -6,11 +6,16 @@ export const routes: Routes = [
     loadComponent: () => import('./Dashboard/dashboard.component').then(m => m.DashboardComponent),
     children: [
       {
+        path : 'home',
+        loadComponent: () => import('./Dashboard/centralRenderSection/components/HomeRender/HomeRender.component').then(m => m.HomeRenderComponent),
+        pathMatch: 'full'
+      },
+      {
         path : 'projects',
         loadComponent: () => import('./Dashboard/centralRenderSection/components/ProjectsRender/ProjectsRender.component').then(m => m.ProjectsRenderComponent)
       },
       {
-        path: 'tech-stach',
+        path: 'tech-stack',
         loadComponent: () => import('./Dashboard/centralRenderSection/components/TechStackRender/TechStackRender.component').then(m => m.TechStackRenderComponent)
       },
       {
@@ -25,9 +30,10 @@ export const routes: Routes = [
         path : 'contact',
         loadComponent: () => import('./Dashboard/centralRenderSection/components/ContactRender/ContactRender.component').then(m => m.ContactRenderComponent)
       },
+
       {
         path : '',
-        loadComponent: () => import('./Dashboard/centralRenderSection/components/HomeRender/HomeRender.component').then(m => m.HomeRenderComponent),
+        redirectTo: 'home',
         pathMatch: 'full'
       }
     ]

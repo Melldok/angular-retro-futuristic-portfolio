@@ -1,0 +1,14 @@
+.gradient-border{
+  background: linear-gradient(111deg, #108198 1.83%, #55307D 100%);
+  flex-grow: 1;
+  flex-basis: 0; /* Important to allow growing */
+  min-width: 0;  /* Prevents the component from shrinking */
+  display: flex;
+  flex-direction: column;
+  background-color: #1A1D38;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.5s;
+
+
+}
