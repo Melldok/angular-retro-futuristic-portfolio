@@ -1,0 +1,61 @@
+.featuredContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 250px;
+  width: 800px;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex : 1;
+  border : 1px solid black;
+}
+
+h3{
+  font-family: 'Loto', sans-serif;
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.tab {
+  text-transform: none;
+  margin: 5px;
+  border-radius: 5px;
+  min-width: 150px;
+  border: 1px solid #305C8C;
+  height: 35px;
+  padding: 6px 12px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+.tab:hover {
+  color: #ffffff;
+  opacity: 0.9;
+  background-color: #191c37;
+}
+
+.tab.active {
+  font-weight: 500;
+  background-color: #111325;
+  background: linear-gradient(101deg, #000 42%, #8E2A8E 99.41%);
+  font-weight: 700;
+}
+
+.tab:focus-visible {
+  background-color: #2C2F3D;
+}

@@ -1,0 +1,19 @@
+:host{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.drawer{
+  background-image: url('/assets/images/LeftDrawer.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}

@@ -5,48 +5,44 @@
 
 <h3>Featured Content</h3>
 
-<div class="flex gap-2 h-11rem">
-  <div class="flex flex-grow-1 bg-blue-200">
-    <expandable-featured-card
-      [title]="'Your Custom Title'"
-      [description]="'Your Custom Description'"
-      [src]="'/assets/images/home.webp'"
-    />
-  </div>
-    <expandable-featured-card
-      [title]="'Your Custom Title'"
-      [description]="'Your Custom Description'"
-      [src]="'/assets/images/home.webp'"
-    />
-</div>
 
-<hr />
-
-<div class="featuredContainer">
+<div class="flex w-full gap-4 my-3 flex-column md:flex-row">
   <expandable-featured-card
-    [title]="'Your Custom Title'"
-    [description]="'Your Custom Description'"
-    [src]="'/assets/images/home.webp'"
+    [title]="titles[0]"
+    [description]="descriptions[0]"
+    [src]="'/assets/images/DeveloperBG.webp'"
+    [routerLink]="['dashboard/about']"
   />
     <expandable-featured-card
-    [title]="'Your Custom Title'"
-    [description]="'Your Custom Description'"
-    [src]="'/assets/images/home.webp'"
+    [title]="titles[1]"
+    [description]="descriptions[1]"
+    [src]="'/assets/images/DesignerBG.webp'"
+    [routerLink]="['dashboard/about']"
   />
 </div>
 
-<div class="flex gap-2 h-11rem">
-  <div class="flex flex-grow-1 bg-blue-200">
-  </div>
-  <div class="flex flex-grow-1 bg-blue-200">
-  </div>
-  <div class="flex flex-grow-1 bg-blue-200">
-  </div>
+
+
+<h3>Popular Now</h3>
+
+
+<div class="flex w-full h-15rem gap-4 my-3 flex-column md:flex-row">
+
+  <popular-card
+    [title]="titles[2]"
+    [description]="descriptions[2]"
+    [backgroundSrc]="'/assets/images/Aquarius.webp'"
+    [avatarSrc]="'/assets/images/PortfolioAvatarPop.png'"
+    [routerLink]="['dashboard/project/epic_portfolio']"
+
+  />
+    <popular-card
+    [title]="titles[3]"
+    [description]="descriptions[3]"
+    [backgroundSrc]="'/assets/images/Saloon.webp'"
+    [avatarSrc]="'/assets/images/NextAvatarPop.png'"
+    [routerLink]="['dashboard/next_steps']"
+  />
 </div>
 
-<div class="flex gap-2 h-11rem">
-  <decorative-drawer></decorative-drawer>
-  <decorative-drawer></decorative-drawer>
-  <decorative-drawer></decorative-drawer>
-</div>
-
+<div class="h-15rem"></div>

@@ -1,0 +1,30 @@
+<h3>Featured Content</h3>
+
+<div class="flex w-full gap-4 my-3 flex-column md:flex-row">
+  @for(project of projects.slice(0,2); track project.title){
+    <expandable-featured-card
+      [title]="project.title | translate"
+      [description]="project.description | translate"
+      [src]="project.image"
+      [routerLink]="project.route"
+    ></expandable-featured-card>
+  }
+</div>
+
+<h3>Popular Now</h3>
+
+<div class="flex w-full h-15rem gap-4 my-3 flex-column md:flex-row">
+  @for(project of projects.slice(2, 4); track project.title){
+    <popular-card
+      [title]="project.title | translate"
+      [description]="project.description | translate"
+      [backgroundSrc]="project.image"
+      [avatarSrc]="project.avatar!"
+      [routerLink]="project.route"
+    ></popular-card>
+  }
+</div>
+
+
+
+<div class="h-15rem"></div>

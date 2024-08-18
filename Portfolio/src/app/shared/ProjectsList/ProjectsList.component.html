@@ -1,0 +1,43 @@
+<div class="projects-list-container">
+  <div class="section-header">
+    <h2>Full-Stack</h2>
+    <button class="see-all-button" [routerLink]="['projects']">{{'see_all' | translate}}</button>
+  </div>
+
+  <ul class="project-list">
+    @for(project of projects; track project.title){
+      <li class="project-list-item">
+        <a [routerLink]="['project', project.title]" class="project-link">
+          <div class="project-avatar">
+            <img [src]="project.avatar" alt="Project Avatar" />
+          </div>
+          <div class="project-details">
+            <h3>{{ project.title | translate}}</h3>
+            <p>{{project.randomNumber}}  {{ project.time | translate }}</p>
+          </div>
+        </a>
+      </li>
+    }
+  </ul>
+
+  <div class="section-header">
+    <h2>Design</h2>
+    <button class="see-all-button" [routerLink]="['projects']">{{'see_all' | translate}}</button>
+  </div>
+
+  <ul class="project-list">
+    @for(project of designProjects; track project.title){
+      <li class="project-list-item">
+        <a [routerLink]="['project', project.title]" class="project-link">
+          <div class="project-avatar">
+            <img [src]="project.avatar" alt="Project Avatar" />
+          </div>
+          <div class="project-details">
+            <h3>{{ project.title | translate}}</h3>
+            <p>{{project.randomNumber}} {{ project.time | translate }}</p>
+          </div>
+        </a>
+      </li>
+    }
+  </ul>
+</div>

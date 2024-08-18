@@ -24,26 +24,26 @@ export class MobileNavigationComponent {
   .filter(route => route && route.path)
   .filter(route => !route.path?.includes(':'))
 
-  public currentRoute = signal<string>('');
+  // public currentRoute = signal<string>('');
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  // constructor(private router: Router, private route: ActivatedRoute) {}
 
-  ngOnInit() {
-    // Set the initial route when the component is initialized
-    this.updateCurrentRoute(this.router.url);
+  // ngOnInit() {
+  //   // Set the initial route when the component is initialized
+  //   this.updateCurrentRoute(this.router.url);
 
-    // Subscribe to NavigationEnd events to update the route when navigation occurs
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
-      this.updateCurrentRoute(event.urlAfterRedirects);
-    });
-  }
+  //   // Subscribe to NavigationEnd events to update the route when navigation occurs
+  //   this.router.events.pipe(
+  //     filter(event => event instanceof NavigationEnd)
+  //   ).subscribe((event: NavigationEnd) => {
+  //     this.updateCurrentRoute(event.urlAfterRedirects);
+  //   });
+  // }
 
-  private updateCurrentRoute(url: string): void {
-    const segments = url.split('/');
-    const lastSegment = segments.pop() || segments.pop();
-    this.currentRoute.set(lastSegment || 'home');
-  }
+  // private updateCurrentRoute(url: string): void {
+  //   const segments = url.split('/');
+  //   const lastSegment = segments.pop() || segments.pop();
+  //   this.currentRoute.set(lastSegment || 'home');
+  // }
 
 }

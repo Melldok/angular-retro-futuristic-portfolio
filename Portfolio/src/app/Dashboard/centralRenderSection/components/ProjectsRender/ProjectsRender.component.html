@@ -3,5 +3,23 @@
   [src]="'/assets/images/LatestProjects.webp'"
 ></background-banner>
 
-<h3>{{'featured content'}}</h3>
 
+
+<div class="tabs-container">
+  <div
+    class="tab"
+    [routerLink]="['dev-projects']"
+    routerLinkActive="active"
+  >
+    DEV
+  </div>
+  <div
+    class="tab"
+    routerLinkActive="active"
+    [routerLink]="['ux-projects']"
+  >
+    UX/UI
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,63 @@
+button:not(.project-button) {
+  border-radius: 3px;
+  border: 1px solid #305c8c;
+  background: #383c5c;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  height: 100%;
+  padding: 0 1rem;
+  text-transform: none;
+  cursor: pointer;
+  height: 40px;
+}
+
+button:hover:not(.project-button) {
+
+  box-shadow: 0 0 10px 3px #f449f4, 10px 1px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.name {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  margin-top: -20px;
+  margin-bottom: 50px;
+  font-size: 1.4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.projects-list-container {
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+}
+
+.projects-list-container::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background-color: transparent;
+}
+
+.projects-list-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+:host{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+}

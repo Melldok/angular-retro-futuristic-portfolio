@@ -10,3 +10,10 @@
   flex : 1;
   border : 1px solid black;
 }
+
+h3{
+  font-family: 'Loto', sans-serif;
+  font-weight: 400;
+  font-size: x-large;
+}
+

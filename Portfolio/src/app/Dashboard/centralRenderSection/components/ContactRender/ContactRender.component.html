@@ -1,1 +1,26 @@
-<p>ContactRender works!</p>,
+
+<background-banner
+  [title]="'Your Custom Title'"
+  [src]="'/assets/images/home.webp'"
+></background-banner>
+
+
+<div class="gradient-wrapper mt-6">
+  <div class="contact-wrapper">
+    <div class="contact-tab-content">
+      <h2 class="contact-title">{{'not_a_bug' | translate}}</h2>
+
+      <p class="contact-message" [ngClass]="{ 'fade': fade }">{{ message() | translate }}</p>
+
+      <div class="gaming-button" (click)="toggleDecoding()">
+        <img src="assets/images/GamingButton.svg" alt="">
+      </div>
+
+      <button class="send-button" (click)="openMail()">
+        <span>{{ buttonMessage() | translate}}</span>
+      </button>
+    </div>
+  </div>
+
+</div>
+

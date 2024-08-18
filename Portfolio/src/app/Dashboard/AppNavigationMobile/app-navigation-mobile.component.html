@@ -2,7 +2,7 @@
   <!-- Dropdown Header -->
   <div class="relative">
     <button class="bg-transparent text-white font-bold py-2 px-4 rounded inline-flex items-center">
-      <span class="mr-1">{{ currentRoute() | titlecase }}</span>
+      <!-- <span class="mr-1">{{ currentRoute() | titlecase }}</span> -->
       <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
         <path d="M5.5 7l4.5 4.5L14.5 7h-9z" />
       </svg>
@@ -11,7 +11,7 @@
     <!-- Dropdown Menu -->
     <ul class="dropdown-content absolute hidden text-gray-700 pt-1 w-48 bg-white rounded-md shadow-lg">
       @for (item of menuItems; track item.path) {
-      <li class="">
+      <li class="text-center">
         <a
           [routerLink]="item.path"
           routerLinkActive="active-route"

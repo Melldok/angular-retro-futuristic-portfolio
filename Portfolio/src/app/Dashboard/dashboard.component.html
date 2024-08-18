@@ -1,8 +1,9 @@
-<div *ngIf="!(isHandset$ | async); else mobileLayout">
+<div *ngIf="!(isHandset$ | async); else mobileLayout" class="container-host">
   <!-- Desktop Layout -->
-  <div class="grid w-full h-full p-0 m-0">
+  <div class="flex w-full h-full p-0 m-0">
     <!-- Left Sidebar (Decorative Drawer) -->
-    <div class="col-1 h-screen">
+    <div class="w-6rem h-screen pl-1">
+      <!-- <div class="drawer"></div> -->
       <decorative-drawer></decorative-drawer>
     </div>
 
@@ -12,17 +13,17 @@
     </div>
 
     <!-- Main Center Content Section -->
-    <div class="col h-screen py-4 px-0">
+    <div class="col h-screen py-3 px-0">
       <div class="h-full w-full">
         <name-header></name-header>
-        <div class="h-full center-holder p-5 my-4">
+        <div class="center-holder">
           <router-outlet></router-outlet>
         </div>
       </div>
     </div>
 
     <!-- Right Sidebar (Profile Section) -->
-    <div class="col-2 h-screen p-3 profileSection">
+    <div class="col-2 h-screen profileSection p-0 m-0">
       <div class="h-full w-full">
         <profile-render-section></profile-render-section>
       </div>

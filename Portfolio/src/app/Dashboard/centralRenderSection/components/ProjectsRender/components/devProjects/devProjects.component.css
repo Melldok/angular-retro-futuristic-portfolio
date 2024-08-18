@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+.featuredContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 250px;
+  width: 800px;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex : 1;
+  border : 1px solid black;
+}
+
+h3{
+  font-family: 'Loto', sans-serif;
+  font-weight: 400;
+  font-size: x-large;
+}
+

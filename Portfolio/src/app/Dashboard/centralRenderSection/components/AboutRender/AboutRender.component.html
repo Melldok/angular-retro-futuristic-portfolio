@@ -1,1 +1,29 @@
-<p>AboutRender works!</p>,
+<background-banner
+  [title]="'full_stack_ux_ui' | translate"
+  [src]="'/assets/images/aboutS.webp'"
+></background-banner>
+
+<div class="mt-6 mb-6">
+  <expandable-featured-card
+    [title]="'28/01_mission_aquarius' | translate"
+    [description]="'aquarius_description' | translate"
+    [src]="'/assets/images/PurpleSaloon.webp'"
+    [expandable]="true"
+  />
+</div>
+
+<div class="flex w-full gap-4 my-3 flex-column md:flex-row">
+  <expandable-featured-card
+    [title]="'CLCircular' | translate"
+    [description]="'ClCircular_experience' | translate"
+    [src]="'/assets/images/aboutBG1.webp'"
+    [expandable]="true"
+  />
+
+  <expandable-featured-card
+    [title]="'Freelance' | translate"
+    [description]="'freelance_experience' | translate"
+    [src]="'/assets/images/aboutbg3.webp'"
+    [expandable]="true"
+  />
+</div>

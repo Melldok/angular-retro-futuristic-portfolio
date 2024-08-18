@@ -1,23 +1,27 @@
-
-  <!-- Gradient Border -->
-  <div class="gradient-border">
-      <!-- Main Image -->
-  <!-- <img [src]="src" alt="Image" class="card-image" /> -->
-
-  <!-- Content Overlay -->
-  <div class="content-overlay">
-    <h3 class="title">{{ title }}</h3>
-    <p class="description">
-      {{ description }}
-    </p>
-    <div class="bottom-info">
-      <span class="online-users">{{ randomOnlineUsers }} Online</span>
-      <button class="see-more-btn" (click)="toggleExpand()">
-        {{ isExpanded ? 'Close' : 'See More' }}
-      </button>
+<!-- Gradient Border -->
+ <div class="hoster"  [ngClass]="{ 'hoster-expanded': isExpanded }">
+  <div class="content-wrapper" [ngClass]="{ 'content-wrapper-expanded': isExpanded }">
+    <!-- Image Box -->
+    <img
+      [src]="src"
+      alt=""
+      class="image-overlay"
+    />
+    <div class="hover-content-gradient" [ngClass]="{ 'content-gradient-expanded': isExpanded }">
+      <h3 class="title">{{ title | translate }}</h3>
+      <p class="description" [ngClass]="{ 'description-expanded': isExpanded }">
+        {{ description | translate }}
+      </p>
+      <div class="bottom-info">
+        <span class="online-users">{{ randomOnlineUsers }} Online</span>
+        <button
+          class="see-more-btn"
+          (click)="expandable ? toggleExpand() : navigate()"
+        >
+          {{ "see_more"| translate}}
+        </button>
+      </div>
     </div>
   </div>
-  </div>
 
-
-
+ </div>

@@ -1,19 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'decorative-drawer',
   standalone: true,
-  encapsulation: ViewEncapsulation.None,
   imports: [
     CommonModule,
   ],
   templateUrl: './decorativeDrawer.component.html',
-  styles: `
-    :host {
-      display: block;
-    }
-  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ['./decorativeDrawer.component.css'],
 })
 export class DecorativeDrawerComponent { }

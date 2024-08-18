@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { LanguageSwitchService } from '../../services/LanguageSwitch.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'name-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './nameHeader.component.html',
   styleUrls: ['./nameHeader.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

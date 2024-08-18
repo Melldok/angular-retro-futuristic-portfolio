@@ -12,7 +12,22 @@ export const routes: Routes = [
       },
       {
         path : 'projects',
-        loadComponent: () => import('./Dashboard/centralRenderSection/components/ProjectsRender/ProjectsRender.component').then(m => m.ProjectsRenderComponent)
+        loadComponent: () => import('./Dashboard/centralRenderSection/components/ProjectsRender/ProjectsRender.component').then(m => m.ProjectsRenderComponent),
+        children: [
+          {
+            path : 'dev-projects',
+            loadComponent: () => import('./Dashboard/centralRenderSection/components/ProjectsRender/components/devProjects/devProjects.component').then(m => m.DevProjectsComponent)
+          },
+          {
+            path : 'ux-projects',
+            loadComponent: () => import('./Dashboard/centralRenderSection/components/ProjectsRender/components/uxProjects/uxProjects.component').then(m => m.UxProjectsComponent)
+          },
+          {
+            path : '',
+            redirectTo: 'dev-projects',
+            pathMatch: 'full'
+          }
+        ]
       },
       {
         path: 'tech-stack',
@@ -23,14 +38,17 @@ export const routes: Routes = [
         loadComponent: () => import('./Dashboard/centralRenderSection/components/AboutRender/AboutRender.component').then(m => m.AboutRenderComponent)
       },
       {
-        path : 'next-steps',
+        path : 'next_steps',
         loadComponent: () => import('./Dashboard/centralRenderSection/components/NextStepsRender/NextStepsRender.component').then(m => m.NextStepsRenderComponent)
       },
       {
         path : 'contact',
         loadComponent: () => import('./Dashboard/centralRenderSection/components/ContactRender/ContactRender.component').then(m => m.ContactRenderComponent)
       },
-
+      {
+        path : 'project/:id',
+        loadComponent: () => import('./Dashboard/centralRenderSection/components/ProjectRender/ProjectRender.component').then(m => m.ProjectRenderComponent)
+      },
       {
         path : '',
         redirectTo: 'home',

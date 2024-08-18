@@ -1,18 +1,33 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-popular-card',
+  selector: 'popular-card',
   standalone: true,
-  imports: [
-    CommonModule,
-  ],
+  imports: [CommonModule, TranslateModule, RouterLink],
   templateUrl: './PopularCard.component.html',
-  styles: `
-    :host {
-      display: block;
-    }
-  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ['./PopularCard.component.scss'],
 })
-export class PopularCardComponent { }
+export class PopularCardComponent {
+  constructor(private router: Router) {}
+
+  @Input({ required: true }) title: string = '';
+  @Input({ required: true }) backgroundSrc: string = '';
+  @Input({ required: true }) avatarSrc: string = '';
+  @Input({ required: true }) description: string = '';
+  @Input() routerLink: any[] = [];
+
+  handleClick() {
+    console.log('Card clicked');
+  }
+  randomOnlineMembers = Math.floor(Math.random() * 10000) + 1000;
+
+  navigate(): void {
+    if (this.routerLink) {
+      this.router.navigate(this.routerLink);
+    }
+  }
+}
