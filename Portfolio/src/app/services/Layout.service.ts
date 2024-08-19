@@ -18,7 +18,7 @@ export class LayoutService {
 
   get isDesktop$(): Observable<boolean> {
     return this.breakpointObserver
-      .observe([Breakpoints.Web, Breakpoints.Large])
+      .observe([Breakpoints.Web, Breakpoints.XLarge])
       .pipe(map(result => result.matches));
   }
 }

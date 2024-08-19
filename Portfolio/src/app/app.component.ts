@@ -8,6 +8,7 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet, CommonModule, LayoutModule],
   templateUrl: './app.component.html',
+  
 
 })
 export class AppComponent {

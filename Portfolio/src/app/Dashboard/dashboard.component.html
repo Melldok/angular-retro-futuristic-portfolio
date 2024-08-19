@@ -1,7 +1,8 @@
 @if(isDesktop$ | async ){
-<div class="container-host">
+
+<div class="hoster-desktop">
   <!-- Desktop Layout -->
-  <div class="flex w-full h-full p-0 m-0">
+  <div class="content-desktop">
     <!-- Left Sidebar (Decorative Drawer) -->
     <div class="w-6rem h-screen pl-1">
       <decorative-drawer></decorative-drawer>
@@ -40,16 +41,20 @@
     </div>
   </div>
 </div>
+
 }@else{
 <!-- Mobile Layout -->
 <div class="mobile-column">
-  <div class="my-4">
-    <name-header></name-header>
-  </div>
 
-  <app-navigation-mobile></app-navigation-mobile>
-  <router-outlet></router-outlet>
-  <profile-render-section></profile-render-section>
+    <name-header></name-header>
+    <app-navigation-mobile></app-navigation-mobile>
+    <router-outlet></router-outlet>
+    <div class="my-5">
+      <profile-render-section></profile-render-section>
+    </div>
+
+
+
 
 </div>
 
