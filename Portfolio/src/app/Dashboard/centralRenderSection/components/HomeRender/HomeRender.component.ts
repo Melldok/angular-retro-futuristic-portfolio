@@ -4,6 +4,7 @@ import { BackgroundBannerComponent } from '../../../../shared/BackgroundBanner/B
 import { ExpandableFeaturedCardComponent } from '../../../../shared/expandable-featured-card/expandable-featured-card.component';
 import { DecorativeDrawerComponent } from '../../../../shared/decorativeDrawer/decorativeDrawer.component';
 import { PopularCardComponent } from '../../../../shared/PopularCard/PopularCard.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home-render',
@@ -14,6 +15,7 @@ import { PopularCardComponent } from '../../../../shared/PopularCard/PopularCard
     ExpandableFeaturedCardComponent,
     DecorativeDrawerComponent,
     PopularCardComponent,
+    TranslateModule
   ],
   encapsulation: ViewEncapsulation.None,
   templateUrl: './HomeRender.component.html',

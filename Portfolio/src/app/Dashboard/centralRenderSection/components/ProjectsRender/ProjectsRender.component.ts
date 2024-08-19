@@ -4,6 +4,7 @@ import { BackgroundBannerComponent } from '../../../../shared/BackgroundBanner/B
 import { UxProjectsComponent } from './components/uxProjects/uxProjects.component';
 import { DevProjectsComponent } from './components/devProjects/devProjects.component';
 import { Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
@@ -12,14 +13,15 @@ import { Router, RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     BackgroundBannerComponent,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ],
   templateUrl: './ProjectsRender.component.html',
   styleUrls: ['./ProjectsRender.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsRenderComponent {
-  
+
   constructor(private router: Router) {}
 
 

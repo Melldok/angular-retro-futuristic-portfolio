@@ -28,8 +28,8 @@ export class NameHeaderComponent {
   resumeDownload(): void {
     const downloadUrl =
       this.currentLanguage === 'en'
-        ? 'https://drive.google.com/file/d/1g1YHQRnOCVkbUzNlrXO7Nx7hhZFr6Nqu/view?usp=drive_link'
-        : 'https://drive.google.com/file/d/1Hfa1soOALheHAqys4gOd0x6zyJM7PRsj/view?usp=drive_link';
+        ? '/assets/docs/CVResumeENG.pdf'
+        : '/assets/docs/CVResumeESP.pdf';
     window.open(downloadUrl, '_blank');
   }
 }

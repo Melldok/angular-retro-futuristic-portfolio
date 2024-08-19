@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { routes } from '../../app.routes';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
-import { filter } from 'rxjs';
+import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({

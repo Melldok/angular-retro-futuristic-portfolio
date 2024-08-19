@@ -3,6 +3,11 @@
   border-left: 1px solid  #3d3d3d;
 }
 
+
+.navigationSection{
+  position: relative;
+
+}
 .center-holder{
   background-color: #1A1D38;
   padding: 5%;
@@ -33,3 +38,61 @@
   width: 100%;
 
 }
+
+
+.music-waves{
+  width: 75%;
+  margin-left: 10px;
+}
+
+.playbox{
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.playbox:hover{
+  background-color: #1C1D2D;
+  box-shadow: 0 0 10px 3px #f449f4, 10px 1px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.radio-text{
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-left: 5px;
+  font-family: 'Lato', sans-serif;
+  position: absolute;
+  bottom: -5px;
+}
+
+.music-background{
+  padding: 1.8rem 0;
+  background-image: url('/assets/images/MusicBackground.svg');
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+.mobile-column{
+  background-color: #1A1D38;
+  padding: 10px;
+  margin: 0;
+  margin-top: 2%;
+  overflow-y: scroll;
+  height: 24450vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 100%;
+}
+
+

@@ -51,7 +51,6 @@
 
 .popular-gradient {
   border-radius: 13px 0px 0px 13px;
-  background: linear-gradient(137deg, #5b7fd6 13.93%, #1bb1d0 48.11%);
   width: 60%;
   height: 100%;
   padding: 0;
@@ -69,7 +68,7 @@
   top: 0;
   left: 0;
 
-  transform: scale3d(1.40, 2, 1);
+  transform: scale3d(3, 2, 1);
 }
 
 .avatar-image {
@@ -84,15 +83,6 @@
   z-index: 11;
 }
 
-.popular-card-background {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 0 15px 15px 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
 
 .popular-content {
@@ -121,6 +111,8 @@
 
 .title{
   font-size: medium;
+  padding: 5px;
+  text-align: center;
 }
 
 .online{

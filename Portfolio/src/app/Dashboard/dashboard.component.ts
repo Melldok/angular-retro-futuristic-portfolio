@@ -35,7 +35,13 @@ export class DashboardComponent {
 
 
   public layoutService = inject(LayoutService);
-  isHandset$ = this.layoutService.isHandset$;
+  isTablet$ = this.layoutService.isTablet$;
+  isDesktop$ = this.layoutService.isDesktop$;
 
+
+  public navigateToRadio(){
+    window.open('https://www.youtube.com/watch?v=4xDzrJKXOOY', '_blank');
+
+  }
 
 }

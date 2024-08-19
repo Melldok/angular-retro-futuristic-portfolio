@@ -15,4 +15,17 @@ import { ProjectsListComponent } from '../../shared/ProjectsList/ProjectsList.co
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./ProfileRenderSection.component.css']
 })
-export class ProfileRenderSectionComponent { }
+export class ProfileRenderSectionComponent {
+
+
+
+  navigateToLinkedin() {
+    window.open('https://www.linkedin.com/in/david-dokic-lazinica-11981a230/', '_blank');
+  }
+
+  navigateToGithub() {
+    window.open('https://github.com/Melldok', '_blank');
+  }
+
+
+}

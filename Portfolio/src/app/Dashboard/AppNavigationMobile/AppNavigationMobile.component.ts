@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { routes } from '../../app.routes';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
-import { filter } from 'rxjs';
+
+
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -20,30 +20,27 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class MobileNavigationComponent {
 
+  public menuOpen: boolean = false;
+
   public menuItems = routes.map((route) => route.children ?? []).flat()
   .filter(route => route && route.path)
   .filter(route => !route.path?.includes(':'))
 
-  // public currentRoute = signal<string>('');
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.menuOpen = false; // Collapse menu on route change
+      }
+    });
+  }
 
-  // constructor(private router: Router, private route: ActivatedRoute) {}
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
 
-  // ngOnInit() {
-  //   // Set the initial route when the component is initialized
-  //   this.updateCurrentRoute(this.router.url);
+  collapseMenu(): void {
+    this.menuOpen = false; // Explicitly collapse menu on item click
+  }
 
-  //   // Subscribe to NavigationEnd events to update the route when navigation occurs
-  //   this.router.events.pipe(
-  //     filter(event => event instanceof NavigationEnd)
-  //   ).subscribe((event: NavigationEnd) => {
-  //     this.updateCurrentRoute(event.urlAfterRedirects);
-  //   });
-  // }
-
-  // private updateCurrentRoute(url: string): void {
-  //   const segments = url.split('/');
-  //   const lastSegment = segments.pop() || segments.pop();
-  //   this.currentRoute.set(lastSegment || 'home');
-  // }
 
 }

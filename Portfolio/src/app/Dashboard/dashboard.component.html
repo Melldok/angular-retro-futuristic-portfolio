@@ -1,15 +1,25 @@
-<div *ngIf="!(isHandset$ | async); else mobileLayout" class="container-host">
+@if(isDesktop$ | async ){
+<div class="container-host">
   <!-- Desktop Layout -->
   <div class="flex w-full h-full p-0 m-0">
     <!-- Left Sidebar (Decorative Drawer) -->
     <div class="w-6rem h-screen pl-1">
-      <!-- <div class="drawer"></div> -->
       <decorative-drawer></decorative-drawer>
     </div>
 
     <!-- Left Main Content Section -->
     <div class="col-2 h-screen p-3 navigationSection">
       <app-navigation></app-navigation>
+      <div class="music-background">
+        <img
+          (click)="navigateToRadio()"
+          class="playbox"
+          src="/assets/images/PlayBox.png"
+          alt=""
+        />
+        <img class="music-waves" src="assets/images/MusicGraphic.svg" alt="" />
+        <p class="radio-text">{{ "favorite_radio" | translate }}</p>
+      </div>
     </div>
 
     <!-- Main Center Content Section -->
@@ -30,22 +40,17 @@
     </div>
   </div>
 </div>
-
-
+}@else{
 <!-- Mobile Layout -->
-<ng-template #mobileLayout>
-  <div class="flex flex-col w-full h-full">
-    <!-- Mobile Navigation -->
-    <app-navigation-mobile></app-navigation-mobile>
-
-    <!-- Main Content Section -->
-    <div class="flex-1 h-full p-3">
-      <router-outlet></router-outlet>
-    </div>
-
-    <!-- Mobile Profile Section -->
-    <div class="h-auto p-3">
-      <profile-render-section></profile-render-section>
-    </div>
+<div class="mobile-column">
+  <div class="my-4">
+    <name-header></name-header>
   </div>
-</ng-template>
+
+  <app-navigation-mobile></app-navigation-mobile>
+  <router-outlet></router-outlet>
+  <profile-render-section></profile-render-section>
+
+</div>
+
+}
