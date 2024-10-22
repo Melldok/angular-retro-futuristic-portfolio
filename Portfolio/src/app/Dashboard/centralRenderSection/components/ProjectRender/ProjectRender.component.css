@@ -16,3 +16,24 @@
   font-weight: 300;
   font-size: 1.2rem;
 }
+
+.back-button {
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  background-color: #373b5a;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s;
+  padding: 15px 10px;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 3px #f449f4, 10px 1px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

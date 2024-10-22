@@ -1,3 +1,12 @@
+
+<div class="h-full" >
+  <button (click)="goBack()" class="back-button">
+    {{ "Back" | translate }}
+  </button>
+</div>
+
+
+
 @if (!project()) {
 <p class="text-center text-xl">
   {{ "No-project-selected" | translate }}

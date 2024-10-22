@@ -77,4 +77,8 @@ export class ProjectRenderComponent implements OnInit  {
       }
     });
   }
+
+  goBack(): void {
+    window.history.back();
+  }
 }
